@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集</title>
+    <style>
+        body {
+            font-family: "微軟正黑體", sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(244, 241, 239);
+            min-height: 100vh;       
+            display: flex;          
+            flex-direction: column;
+        }
+
+        h1 {
+            color: rgb(89, 66, 29); 
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        h4 {
+            color: rgb(148, 118, 69); 
+            font-weight: 700; 
+            line-height: 1.5;
+            padding: 0 20px;
+        }
+
+        nav { padding: 20px 0; }
+
+        .sliding {
+            text-align: center;
+            text-decoration: none; 
+            color: rgb(134, 104, 57);   
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .sliding::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(134, 104, 57);
+            transform: scaleX(0); 
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        .sliding:hover::after { transform: scaleX(1); }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 40px 60px 40px;
+            width: 90%; 
+            box-sizing: border-box; 
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            gap: 50px;
+            margin-bottom: 80px;
+            text-align: left;
+            background-color: rgb(255, 255, 255);
+            padding: 40px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .profile-img {
+            object-fit: cover;
+            width: 250px;        
+            height: 250px;        
+            border-radius: 50%;   
+            box-shadow: 0 10px 20px rgba(89, 66, 29, 0.15); 
+            flex-shrink: 0; 
+        }
+
+        .profile-text {
+            max-width: 500px;
+        }
+            
+        .profile-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            margin-top: 0;
+        }
+
+        .profile-text .subtitle {
+            font-size: 1.1rem;
+            color: rgb(148, 118, 69);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .profile-text p {
+            line-height: 1.6;
+            color: rgb(89, 66, 29);
+        }
+
+        .me {
+            color: rgb(89, 66, 29);
+        }
+
+        @media(max-width: 800px) { 
+            .profile-section {
+                flex-direction: column; 
+                text-align: center; 
+            }
+            
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-text {
+                text-align: center; 
+            }
+        }
+            
+        footer {
+            font-size: 12px;
+            text-align: center;
+            color: rgb(89, 66, 29);
+            background-color: rgb(255, 255, 255);
+            padding: 15px 0;
+            margin-top: auto; 
+            width: 100%;
+        }
+        footer p { margin: 0; }
+    </style>
+</head>
+<body>
+
+    <img src="banner.png" alt="banner" class="banner-img">
+    
+    <nav>
+        <a href="index.html" class="sliding">Home</a>
+        <a href="about.html" class="sliding">About</a>
+        <a href="works.html" class="sliding">Works</a>
+    </nav>
+    
+    <h1>About Me 𖤘</h1>
+
+    <div class="container">
+        
+        <section class="profile-section">
+            <img src="img-7.png" alt="Profile Photo" class="profile-img">
+            
+            <div class="profile-text">
+                <span class="subtitle">HELLO, I AM</span>
+                <h1>Wu Hu</h1>
+                <p>目前主修動畫製作、正在累積3D動畫與角色相關作品。<br>
+                   同時也對寫實風格及動作表現特別有興趣，持續嘗試著不同的製作流程。</p>
+            </div>
+        </section>
+
+        <section class="me">
+            <h2>Let's Connect</h2>
+            <p>目前開放 3D 動畫與角色設計相關的合作機會，歡迎來信討論！</p>
+            <p>Gmail ➔ wuhu4466@gmail.com</p>
+        </section>
+
+    </div> <footer>
+        <p>wuhu @2026</p>
+    </footer>
+
+</body>
+</html>

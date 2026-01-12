@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集</title>
+    <style>
+        body {
+            font-family: "微軟正黑體", sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(244, 241, 239);
+            min-height: 100vh;       
+            display: flex;          
+            flex-direction: column;
+        }
+
+        h1 {
+            color: rgb(89, 66, 29); 
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        h4 {
+            color: rgb(148, 118, 69); 
+            font-weight: 700; 
+            line-height: 1.5;
+            padding: 0 20px;
+        }
+
+        nav { padding: 20px 0; }
+
+        .sliding {
+            text-align: center;
+            text-decoration: none; 
+            color: rgb(134, 104, 57);   
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .sliding::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(134, 104, 57);
+            transform: scaleX(0); 
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        .sliding:hover::after { transform: scaleX(1); }
+
+        .main-content {
+            flex: 1; 
+            padding-bottom: 40px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .media-gallery {
+            display: flex;
+            justify-content: center; 
+            align-items: center;      
+            gap: 20px;                
+            margin: 30px 0;
+        }
+
+        .media-gallery video, 
+        .media-gallery img {
+            height: 340px;    
+            width: auto;      
+            max-width: 100%;  
+            object-fit: cover; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @media(max-width: 800px) { 
+            .media-gallery {
+                flex-direction: column;
+            }
+
+            .media-gallery video, 
+            .media-gallery img {
+                width: 100%; 
+                height: auto; 
+                max-height: none; 
+            }
+        }
+
+        footer {
+            font-size: 12px;
+            text-align: center;
+            color: rgb(89, 66, 29);
+            background-color: rgb(255, 255, 255);
+            padding: 15px 0;
+        }
+        footer p { margin: 0; }
+    </style>
+</head>
+<body>
+
+    <img src="banner.png" alt="banner" class="banner-img">
+    
+    <nav>
+        <a href="index.html" class="sliding">Home</a>
+        <a href="about.html" class="sliding">About</a>
+        <a href="works.html" class="sliding">Works</a>
+    </nav>
+    
+    <h1>Welcome to my portfolio ✎ ̼ </h1>
+
+    <div class="main-content">
+        <h4>目前主修動畫製作、正在累積3D動畫與角色相關作品<br>同時也對寫實風格及動作表現特別有興趣，持續嘗試著不同的製作流程</h4>
+        
+        <div class="media-gallery">
+            <video controls poster muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            
+            <img src="img-1.png" alt="作品圖">
+        </div>
+
+        <h4>——　作品欣賞「維修記」　——</h4>
+    </div>
+
+    <footer>
+        <p>wuhu @2026</p>
+    </footer>
+
+</body>
+</html>
